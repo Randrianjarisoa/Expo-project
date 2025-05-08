@@ -2,6 +2,7 @@ import { Link } from 'expo-router'
 import React from 'react'
 import { Image, StyleSheet, Text, View } from 'react-native'
 import Dedo from '../assets/img/dedo.png'
+//themed  component 
 
 const Home = () => {
   return (
@@ -31,7 +32,16 @@ const styles = StyleSheet.create({
   img: {
     marginVertical: 20,
     height: 100,
-    width: 70
+    width: 70,
+    borderRadius: 10,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5
   },
   link: {
     marginVertical: 10,
