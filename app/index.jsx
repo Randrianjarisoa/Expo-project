@@ -1,19 +1,31 @@
 import { Link } from 'expo-router'
 import React from 'react'
-import { Image, StyleSheet, Text, View } from 'react-native'
+import { StyleSheet } from 'react-native'
 import Dedo from '../assets/img/dedo.png'
+import Spacer from '../components/Spacer'
+import ThemedLogo from '../components/ThemedLogo'
+import ThemedText from '../components/ThemedText'
+import ThemedView from '../components/ThemedView'
 //themed  component 
 
 const Home = () => {
   return (
-    <View style={styles.container}>
-      <Image source={Dedo} style={styles.img} />
-      <Text style={styles.title}>Dieudonné  </Text>
-      <Text style={{ marginTop: 10, marginBottom: 30, fontSize: 35 }}> Dev FullStack Mobile </Text>
-      <Link href="/about" style={styles.link}> About page </Link>
-      <Link href="/contact" style={styles.link}> Contact page </Link>
+    <ThemedView style={styles.container}>
+      <ThemedLogo source={Dedo} style={styles.img} />
 
-    </View>
+      <ThemedText style={styles.title} title={true}> Dieudonné </ThemedText>
+
+      <Spacer height={10} />
+      <ThemedText > Dev FullStack Mobile </ThemedText>
+
+      <Link href="/about" style={styles.link}>
+        <ThemedText> About page </ThemedText>
+      </Link>
+      <Link href="/contact" style={styles.link}>
+        <ThemedText> Contact page </ThemedText>
+      </Link>
+
+    </ThemedView>
   )
 }
 

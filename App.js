@@ -4,8 +4,8 @@ import { StyleSheet, Text, View } from "react-native";
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Fihirana miavaka </Text>
       <StatusBar style="auto" />
+      <Text>Fihirana miavaka </Text>
     </View>
   );
 }
